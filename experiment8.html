@@ -1,0 +1,46 @@
+<!-- Q8 :-Write a JavaScript program to demonstrate functions. -->
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+<label>num1</label><input type="text" placeholder="enter a num" id=" num1 "></input>
+<br/><br/>
+<label>num2</label><input type="text" placeholder="enter a num" id=" num2 "></input>
+<br/>
+<br/>
+<label>Result:</label><input type="text" disabled id="r"/>
+<br/>
+<br/>
+<input type="button" onclick="add()" value="add"/>
+<input type="button" onclick="sub()" value="sub"/>
+<input type="button" onclick="mul()" value="mul"/>
+<input type="button" onclick="div()" value="div"/>
+</form>
+<script>
+function add() {
+let a,b;
+a=parseInt(document.getElementById("num1").value);
+b=parseInt(document.getElementById("num2").value);
+document.getElementById("r").value=(a+b);
+}
+function sub() {
+let a,b;
+a=parseInt(document.getElementById("num1").value);
+b=parseInt(document.getElementById("num2").value);
+document.getElementById("r").value=(a-b);
+}
+function mul() {
+let a,b;
+a=parseInt(document.getElementById("num1").value);
+b=parseInt(document.getElementById("num2").value);
+document.getElementById("r").value=(a*b);
+}
+function div() {
+let a,b;
+a=parseInt(document.getElementById("num1").value);
+b=parseInt(document.getElementById("num2").value);
+document.getElementById("r").value=(a/b);
+}
+</script>
+</body>
+</html>

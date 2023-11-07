@@ -1,0 +1,22 @@
+<!--Q9 :-Write a JavaScript program to demonstrate DOM Elements, events.-->
+<!DOCTYPE html>
+<html>
+<body>
+<p id="a"> Hii..</p>
+<p class="c"> Hello.....</p>
+<p class="c">GOOD MORNING!!.....</p>
+<p id="demo"></p>
+<p id="h"></p>
+<p id="s"></p>
+</body>
+<script>
+let element=document.getElementById("a");
+let b=document.getElementsByTagName("p");
+let d=document.getElementsByClassName("c");
+let q=document.querySelectorAll("p.c");
+document.getElementById("demo").innerHTML='This is related to getElementByTagName '+b[0].innerHTML;
+document.getElementById("a").innerHTML='This is related to getElementById '+element.innerHTML;
+document.getElementById("h").innerHTML='This is related to getElementByClassName '+d[0].innerHTML;
+document.getElementById("s").innerHTML='This is related to querySelectorAll '+q[1].innerHTML;
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!-- Q11 :-Write a JavaScript program to validate the following fields of the above registration page.
+a.	Name(name should contain alphabets and the length should not be less than 6 characters).
+b.	Password(password should not be less than 6 charecters).
+c.	E-mail id(should not contain any invalid and must follow the standard pattern name@domain.com).
+d.	Phone number(Phone number should contain 10 digits only).-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .f {
+            border: 10px solid green;
+            margin: 2px;
+            text-align: center;
+        }
+
+        label textarea {
+            vertical-align: middle;
+        }
+
+        .button {
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: rgba(255, 255, 255, 0.652);
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let x = document.forms["f"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+        }
+        function validateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+            if (inputText.value.match(mailformat)) {
+                alert("Valid email address!");
+                document.form1.text1.focus();
+                return true;
+            }
+            else {
+                alert("Invalid email address!");
+                document.form1.text1.focus();
+                return false;
+
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="white">
+    <h3 align="center">Registration Form</h3>
+    <form name="f" align="center">
+        <br>
+        <b>Name:</b><input type="text" name="name" placeholder="" minlength="10" /><br>
+        <br>
+        <b>Password:</b><input type="password" name="pass" placeholder="" minlength="6"
+            required /><br><br>
+        <b> <label for="email">Email:</label></b>
+        <input type="email" id="email" name="email" placeholder="" required /><br><br>
+        <input type="submit" name="submit" value="Check-Email" onclick="validateEmail(document.f.email)" /><br><br>
+        <b>Phone No:</b><input type="text" placeholder="" maxlength="10" pattern="\d{10}"
+            required />
+        <br>
+        <br>
+        <b>Gender:</b><input type="radio" name="1">Male</input>
+        <input type="radio" name="1">Female</input>
+       <br><br>
+        <b>Languages known:</b>
+        <input type="checkbox" name="a">Telugu</input>
+        <input type="checkbox" name="b">English</input>
+        <input type="checkbox" name="c">Hindi</input>
+         <br><br>
+        <label><b>Address:</b>
+            <textarea rows="10" cols="30"></textarea></label><br>
+        <br>
+        <button class="button" onclick="return validateForm()">Submit</button><br><br>
+
+    </form>
+</body>
+
+</html>
